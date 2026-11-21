@@ -3,31 +3,145 @@
 <title>English in Wonderverse</title>
 <style>
 *{box-sizing:border-box}body{margin:0;background:#112637;color:#fff6e2;font:17px/1.65 "Thonburi","Leelawadee UI",sans-serif}main{max-width:1160px;margin:auto;padding:0 clamp(16px,4vw,52px) 36px}header,footer{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:16px 0;color:#eed4a2}header{border-bottom:1px solid #47606b;font:italic bold 18px Georgia,serif}header span:last-child,footer{font:14px/1.5 system-ui}article{border-radius:24px;overflow:hidden;background:#20394a;border:1px solid #49616a;margin-top:20px;box-shadow:0 18px 65px #09162280}.art{position:relative;background:#263d4a}.art svg{width:100%;height:100%;display:block}.content{padding:clamp(21px,4vw,44px);align-self:center}.eyebrow{color:#f2c988;font:bold 14px/1.5 Georgia,serif;letter-spacing:.09em}.content h1{font:600 clamp(29px,4vw,48px)/1.24 Georgia,"Thonburi",serif;margin:8px 0 16px;text-wrap:balance}.cover h1{font-size:clamp(44px,5vw,72px);line-height:1;letter-spacing:-.045em}.content p{margin:12px 0}.quote{border-left:3px solid #dfae64;background:#162d3d;padding:12px 16px;color:#ffe2ac;border-radius:0 10px 10px 0}.buttons{display:grid;gap:9px;margin-top:22px}button{font:inherit;color:#fff9e9;background:#2c4858;border:1px solid #69818a;text-align:left;padding:11px 16px;border-radius:13px;cursor:pointer;min-height:48px}button:hover,button:focus-visible{background:#405969;border-color:#ffdaa4}button:focus-visible{outline:3px solid #ffdc9a;outline-offset:2px}.primary{background:#f6cb88;color:#25313b;font-weight:bold;border-color:#f6cb88}.primary:hover,.primary:focus-visible{background:#ffe0a9}.page{border-top:1px solid #60727b;padding:12px 0}.page small{color:#ffd392}.trail{display:flex;gap:6px}.trail i{height:9px;width:9px;border:1px solid #d3bb94;transform:rotate(45deg)}.trail i.on{background:#ffd290}.float{animation:float 3.5s ease-in-out infinite}.spark{animation:twinkle 2.6s ease-in-out infinite alternate}.in{animation:appear .45s ease-out}@keyframes appear{from{opacity:.2;transform:translateY(7px)}}@keyframes float{50%{transform:translateY(-7px)}}@keyframes twinkle{to{opacity:.28}}@media(min-width:800px){article{display:grid;grid-template-columns:48% 52%;min-height:560px}.art svg{position:absolute;inset:0}.content{min-width:0}}@media(max-width:799px){.art{aspect-ratio:1.88}.art svg{object-fit:cover}header{padding:12px 0}article{margin-top:12px}.content{padding:20px}.cover .art{aspect-ratio:1.48}}@media(prefers-reduced-motion:reduce){*,*:before{animation:none!important}}
+
+body{background:#f2e8d3;color:#352e33}header,footer{color:#584537}header{border-color:#cab99e}article{background:#fff9e9;border:1px solid #c1ac87;box-shadow:0 15px 48px #57412723}.eyebrow{color:#7c3d40}.quote{background:#f4ebd8;color:#483526;border-color:#b8874e}.content h1{color:#303f3e;line-height:1.36}button{background:#fcf3df;color:#363d39;border-color:#bdad90}button:hover,button:focus-visible{background:#eee0c1;border-color:#856746}.primary,.primary:hover,.primary:focus-visible{background:#315956;color:#fff7dc;border-color:#315956}.trail i{border-color:#90704e}.trail i.on{background:#996449}.art{isolation:isolate;overflow:hidden;background:#cabb99}.art::before{content:"";position:absolute;inset:-20px;background:var(--picture) center/cover;filter:blur(16px) brightness(.82);z-index:-1}.art img{display:block;width:100%;height:100%;position:absolute;inset:0;object-fit:contain;animation:appear .55s ease-out}.page{border-color:#d6c6a5}.page summary{cursor:pointer;padding:4px 0}.content p{line-height:1.75}.content h1:focus{outline:none}@media(max-width:799px){.art,.cover .art{aspect-ratio:auto;height:clamp(215px,65vw,330px)}}@media(prefers-reduced-motion:reduce){.art img{animation:none}}
 </style>
 <main><header><span>✧ Wonderverse</span><span>Experiential English</span></header><article><div class="art" aria-hidden="true"></div><section class="content"></section></article><footer><span id="status"></span><div class="trail" aria-hidden="true"></div></footer></main>
 <script>
 const doors=[
-{en:'The Broken Grammar Library',th:'ห้องสมุดไวยากรณ์ร้าว',obj:'✒',hue:'#668b8a',story:'หนังสือเล่มหนึ่งสั่นอยู่บนชั้น ประโยคที่ขีดเส้นใต้ด้วยหมึกแดงหลุดจากหน้ากระดาษ บรรณารักษ์ยื่นปากกาให้คุณ “ช่วยจัดการประโยคนี้ที ก่อนที่หมึกจะลบมันหายไปทั้งบรรทัด”',quote:"She don't know the answer, but she can help you.",options:['แก้เป็น “She doesn’t know the answer.” แล้วคงส่วนที่เหลือไว้','เก็บคำเดิมไว้ คนอ่านยังเข้าใจว่าเธอช่วยได้','เปิดดูหน้าก่อนหน้า ว่าใครพูดกับใคร'],early:['หมึกแดงจางลงเมื่อปลายปากกาเติมคำว่า doesn’t','แถบกระดาษเลิกสั่น แต่ตราแก้คำผิดยังลอยอยู่','คุณพลิกหน้าแรกแล้วพบรอยกาว เหมือนมีคนแปะปกใหม่ทับไว้'],twist:'ปกใหม่หลุดออก ข้างในเป็นบทละครของรุ่นพี่! นักแสดงจำตัวละครนี้ได้จากวิธีพูดของเธอ แต่อีกหน้ามีคนคัดประโยคเดียวกันไปทำตัวอย่างสำหรับสอบพรุ่งนี้',end:['นักแสดงเก็บฉบับแก้ไว้ซ้อมอีกแบบ ส่วนคนเตรียมสอบวงคำว่า doesn’t ไว้','นักแสดงอ่านด้วยเสียงที่คุ้นเคย คนเตรียมสอบยกมือถามว่าข้อสอบจะใช้รูปไหน','บรรณารักษ์ทำที่คั่นสองสี แยกหน้าบทละครกับหน้าทบทวนสอบ']},
-{en:'The Queen of Perfect English',th:'ราชินีแห่งเสียงอันสมบูรณ์',obj:'♛',hue:'#9c727f',story:'ในท้องพระโรง ราชินีกำลังเลือกผู้ประกาศงานเลี้ยง คนหนึ่งมาจากลอนดอน อีกคนเป็นช่างทำนาฬิกาชาวไทยที่รู้จักแขกทุกโต๊ะ ทั้งสองอ่านประกาศได้คล่อง ราชินีส่งมงกุฎผู้ประกาศให้คุณเป็นคนเลือก',quote:'“Meet by the west gate when the clock strikes six.”',options:['มอบมงกุฎให้ผู้ประกาศจากลอนดอน','มอบมงกุฎให้ช่างนาฬิกาที่คุ้นกับแขก','ให้ทั้งคู่ลองประกาศ แล้วฟังว่าแขกไปถูกประตูไหม'],early:['ผู้ประกาศโค้งรับมงกุฎและเดินขึ้นแท่นหิน','ช่างนาฬิกาไขลานไมโครโฟนแล้วเรียกทุกโต๊ะให้เงียบ','ทั้งสองผลัดกันประกาศ แต่แขกกลับเดินแยกเป็นสองแถว'],twist:'ประตูตะวันตกมีสองบาน! แขกเรียกบานเก่าว่า “ประตูเห็ด” ส่วนราชินีเพิ่งเปลี่ยนชื่ออีกบาน ไม่มีสำเนียงไหนช่วยบอกได้ว่าต้องไปบานใด หากผู้ประกาศยังถือแผนที่คนละฉบับ',end:['ผู้ประกาศจากลอนดอนขอแผนที่จากราชินี แล้วเพิ่มสีของบานประตูลงในประกาศ','ช่างนาฬิกาใช้ชื่อเล่นของประตู แขกประจำพาแขกหน้าใหม่เดินตาม','ผู้ประกาศทั้งสองลองบอกทางกับแขกคนละโต๊ะ แล้วปรับประกาศจากสิ่งที่แขกได้ยิน']},
-{en:'The Mixed-Language Market',th:'ตลาดถ้อยคำสลับภาษา',obj:'☕',hue:'#ab805d',story:'แผงชาของกระต่ายขาวมีลูกค้าต่อคิวยาว ป้าย “Cha Yen” ทำให้นักเดินทางคนหนึ่งนึกว่าเป็นชื่อเจ้าของร้าน แม่ค้าส่งชอล์กให้คุณ “ช่วยเขียนป้ายใหม่ก่อนน้ำแข็งละลายได้ไหม”',quote:'Cha Yen · ชาเย็น · 35 baht',options:['เขียน “Thai iced tea” ให้เห็นชัดจากท้ายแถว','เก็บ “ชาเย็น / Cha Yen” แล้วเติมคำอธิบายภาษาอังกฤษ','วาดแก้วชาสีส้ม ใส่ราคา แล้วชวนลูกค้าชี้สั่ง'],early:['นักเดินทางอ่านป้ายภาษาอังกฤษแล้วขยับเข้ามาใกล้','แม่ค้าลองออกเสียงชื่อชาพร้อมกับลูกค้า','คนท้ายแถวยกนิ้วชี้รูปแก้ว เป็นสัญญาณสั่งชาแก้วแรก'],twist:'เรือเที่ยวใหม่มาถึง ลูกค้ากลุ่มนี้อ่านทั้งไทยและอังกฤษได้น้อย คนหนึ่งยกขวดนมขึ้นแล้วส่ายหน้า แม่ค้ามีทั้งชานมและชาดำ แต่ในรูปทั้งสองแก้วดูคล้ายกัน',end:['ลูกค้าชี้คำว่า tea แม่ค้าจึงยกเหยือกทั้งสองใบมาให้ดูใกล้ ๆ','ลูกค้าจำเสียง “ชาเย็น” ได้ แม่ค้าชูขวดนมถามอีกครั้งก่อนริน','ลูกค้าชี้รูปแล้วชี้ขวดนม แม่ค้าวาดรูปหยดนมเพิ่มข้างแก้วที่ใส่นม']},
-{en:'The Grammar Machine',th:'เครื่องจักรขัดเกลาถ้อยคำ',obj:'⚙',hue:'#7388a3',story:'เฟืองทองเหลืองกำลังพิมพ์บัตรเชิญงานกวี เจ้าของงานเขียนถึงยายผู้ชอบใช้แสงจันทร์แทนไฟ เครื่องเสนอประโยคที่อ่านง่ายขึ้น และรอให้คุณดึงคันโยกก่อนแท่นพิมพ์จะหมุน',quote:'“Grandma keeps a little moon in her kitchen.” ↔ “My grandmother has a light in her kitchen.”',options:['พิมพ์ฉบับเครื่อง เพื่อให้แขกอ่านเข้าใจทันที','พิมพ์ฉบับกวี เพื่อเก็บภาพดวงจันทร์ในครัว','วางสองฉบับคู่กันให้คนอ่านเลือกตีความ'],early:['เฟืองเรียงตัวอักษรคำว่า light อย่างเป็นระเบียบ','ดวงจันทร์ดวงเล็กกลิ้งออกมาจากช่องกระดาษ','แท่นพิมพ์แยกเป็นสองแถว หมึกสีเงินกับหมึกสีคราม'],twist:'ยายเดินเข้ามาถือโคมทรงจันทร์ “หลานเรียกมันว่า little moon ตั้งแต่เด็ก” ด้านหลังบัตรยังมีแขกที่กำลังเรียนอังกฤษเขียนไว้ว่า “ฉันอยากเข้าใจเรื่องนี้ด้วย”',end:['แขกอ่านบัตรได้ทันที ยายหยิบโคมมาเล่าเรื่องชื่อเล่นให้ฟัง','ยายแขวนโคมเหนือบัตร แขกหยุดถามว่าดวงจันทร์มาอยู่ในครัวได้อย่างไร','แขกคนหนึ่งวงคำว่า moon กับ light แล้วถามกวีว่าทำไมถึงเลือกต่างกัน']},
-{en:'The Door Without Rules',th:'ประตูที่ไร้กฎ',obj:'🗝',hue:'#73856e',story:'ที่ปลายทางมีประตูเปล่ากับช่องกุญแจสามช่อง กระจกเหนือประตูถามว่า “ถ้าต้องเลือกภาษาอังกฤษที่ดีที่สุดสำหรับป้ายพาคนกลับบ้าน ใครควรมีสิทธิ์ตัดสิน?” คุณถือกุญแจอยู่คนเดียว',quote:'“Who decides which English belongs here?”',options:['ส่งกุญแจให้ผู้เขียนกฎของเมือง','ส่งกุญแจให้คนที่ต้องใช้ป้ายเดินทาง','วางกุญแจกลางวง ให้ผู้เขียนกับคนเดินทางลองใช้ป้ายด้วยกัน'],early:['ผู้เขียนกฎคลี่พจนานุกรมแล้วเริ่มร่างป้าย','นักเดินทางผลัดกันเล่าว่าเคยหลงทางตรงไหน','ทุกคนล้อมวงรอบแผนที่ที่ยังวาดไม่เสร็จ'],twist:'กระจกหมุนกลับด้าน เผยให้เห็นว่าคนอีกฝั่งกำลังใช้ป้ายเดียวกันเพื่อเดินทางเข้าเมือง! คำว่า “กลับบ้าน” ของฝั่งหนึ่งจึงพาอีกฝั่งไปผิดทาง คุณจะฝากกุญแจไว้กับใครเมื่อคุณข้ามไปแล้ว?',end:['ผู้เขียนกฎติดชื่อปลายทางทั้งสองด้าน แล้วเว้นขอบป้ายให้คนมาทักท้วง','นักเดินทางพลิกป้ายตามทิศที่ยืน คนอีกฝั่งจึงเริ่มบอกเส้นทางของตัวเอง','ทั้งสองฝั่งลองเดินสวนกัน คนเขียนขีดแก้คำบนป้ายตามจุดที่แต่ละคนหยุดลังเล']}
+  {
+    "en": "The Broken Grammar Library",
+    "th": "ห้องสมุดหมึกแดง",
+    "story": "ในห้องสมุด กระต่ายใส่แว่นนั่งเฝ้าหนังสือเล่มหนา มันชี้ให้คุณดูเส้นหมึกแดงใต้คำว่า don’t",
+    "invite": "“ประโยคนี้แปลว่า ถึงเด็กคนนั้นจะไม่รู้คำตอบ แต่เธอก็ช่วยคุณได้” กระต่ายบอก “คนเขียนใช้ She don’t แต่ในตำราเขียนว่า She doesn’t เราจะทำอย่างไรกับคำนี้ดี”",
+    "quote": "She don’t know the answer, but she can help you.",
+    "options": [
+      "แก้ don’t เป็น doesn’t",
+      "เก็บคำที่คนเขียนใช้ไว้",
+      "พลิกดูว่าใครพูดประโยคนี้"
+    ],
+    "early": [
+      "คุณเติมตัวอักษรสองสามตัว เส้นสีแดงก็หายวับ",
+      "คุณวางปากกาลง กระต่ายลองอ่านประโยคนั้นอีกครั้ง",
+      "คุณค่อย ๆ พลิกหน้ากระดาษ ได้ยินเสียงคนซ้อมละครอยู่ข้างใน"
+    ],
+    "twist": "ตัวละครกระดาษโผล่หน้ามาจากสันหนังสือ “นั่นบทพูดของฉันเอง! เพื่อนจำฉันได้เพราะฉันพูดแบบนี้” เด็กอีกคนชูสมุดขึ้น “แต่ฉันจดประโยคนี้ไปอ่านสอบแล้วนะ”",
+    "end": [
+      "นักแสดงลองซ้อมบทที่แก้แล้ว ส่วนเด็กที่เตรียมสอบจดคำว่า doesn’t ลงสมุด",
+      "นักแสดงยิ้มเมื่อได้พูดคำเดิม เด็กที่เตรียมสอบเลยขอให้กระต่ายสอนรูปประโยคที่ใช้ในข้อสอบ",
+      "กระต่ายติดที่คั่นไว้สองอัน อันหนึ่งเขียนว่า “บทละคร” อีกอันเขียนว่า “ตัวอย่างอ่านสอบ”"
+    ],
+    "page": "หน้าหนังสือแผ่นแรกค่อย ๆ เลื่อนออกมาจากใต้ที่คั่น"
+  },
+  {
+    "en": "The Queen of Perfect English",
+    "th": "งานเลี้ยงของราชินีโพแดง",
+    "story": "ราชินีโพแดงกำลังจะเปิดงานเลี้ยงน้ำชา เธออยากได้คนบอกทางให้แขก คุณแตรเป็นนักดนตรีจากลอนดอน ส่วนพี่ช่างนาฬิกามาจากเมืองไทยและรู้จักวังนี้ทุกซอกทุกมุม",
+    "invite": "ทั้งคู่พูดภาษาอังกฤษได้ ราชินีถือแตรทองยื่นมาให้ “เจ้าจะให้ใครประกาศดีจ๊ะ”",
+    "quote": "“Meet me at the west gate.” · มาเจอกันที่ประตูตะวันตกนะ",
+    "options": [
+      "ให้คุณแตรเป็นคนประกาศ",
+      "ให้พี่ช่างนาฬิกาเป็นคนประกาศ",
+      "ชวนทั้งสองคนลองบอกทางให้แขกฟัง"
+    ],
+    "early": [
+      "คุณแตรสูดหายใจแล้วประกาศเสียงดังไปทั่ววัง",
+      "พี่ช่างนาฬิกาปีนขึ้นเก้าอี้ แขกพากันเงี่ยหูฟัง",
+      "ทั้งสองคนผลัดกันพูดคำว่า west gate แขกพยักหน้าแล้วออกเดิน"
+    ],
+    "twist": "เอ๊ะ! แขกครึ่งหนึ่งเดินไปทางสวน อีกครึ่งเดินไปทางครัว ราชินีคลี่แผนที่แล้วร้อง “ตายจริง! วังเรามีประตูตะวันตกสองบาน ฉันลืมบอกว่างานอยู่ที่บานสีฟ้า”",
+    "end": [
+      "คุณแตรเติมคำว่า blue ลงในประกาศ แขกที่ถือแผนที่ระบายสีฟ้าลงบนประตูบานนั้น",
+      "พี่ช่างนาฬิกาบอกว่า “บานสีฟ้าข้างต้นเห็ดไง” แขกที่เคยมาแล้วจำต้นเห็ดได้ จึงชวนแขกคนอื่นเดินไปด้วย",
+      "คนหนึ่งบอกสี อีกคนชี้ทาง แขกท้ายแถวชี้กลับไปที่ประตูสีฟ้า คราวนี้ทุกคนเข้าใจตรงกัน"
+    ],
+    "page": "ใต้ถาดเค้กมีหน้าหนังสือแผ่นที่สอง ราชินีเช็ดเศษเค้กออกแล้วยื่นให้คุณ"
+  },
+  {
+    "en": "The Mixed-Language Market",
+    "th": "ร้านชาใต้ดอกเห็ด",
+    "story": "ใต้ร่มเห็ดแดง กระต่ายแม่ค้ากำลังรินชาสีส้มใส่น้ำแข็ง นักเดินทางอ่านป้าย “Cha Yen” แล้วก้มลงถามว่า “คุณชาเย็นอยู่ไหมครับ”",
+    "invite": "แม่ค้าหัวเราะเบา ๆ “ชาเย็นเป็นชื่อเครื่องดื่มจ้ะ” เธอยื่นชอล์กให้คุณ “ช่วยทำป้ายให้ลูกค้าคนต่อไปรู้ทีว่าร้านเราขายอะไร”",
+    "quote": "Cha Yen · ชาเย็น · 35 บาท",
+    "options": [
+      "เขียนชื่อชาเป็นภาษาอังกฤษว่า Thai iced tea",
+      "เขียนทั้ง “ชาเย็น” และ “Thai iced tea”",
+      "วาดรูปแก้วชาแล้วเขียนราคาไว้ข้าง ๆ"
+    ],
+    "early": [
+      "คุณเขียนตัวโตจนคนท้ายแถวอ่านคำว่า tea ได้",
+      "เด็กคนหนึ่งลองอ่าน “ชาเย็น” ตามแม่ค้า แล้วชี้คำว่า tea ให้เพื่อนดู",
+      "นักเดินทางชี้รูปแก้วแล้วยกหนึ่งนิ้ว แม่ค้าพยักหน้ารับ"
+    ],
+    "twist": "เรือลำหนึ่งเพิ่งเทียบท่า เด็กบนเรืออ่านทั้งไทยและอังกฤษได้นิดเดียว เขาชี้ไปที่ขวดนมแล้วส่ายหน้า บนโต๊ะมีชาสองแก้ว แก้วหนึ่งใส่นม อีกแก้วไม่ใส่",
+    "end": [
+      "แม่ค้าอ่านชื่อภาษาอังกฤษให้ฟัง แล้วเปิดฝาเหยือกทั้งสองใบให้เด็กดู เด็กจึงชี้แก้วที่อยากได้",
+      "แม่ค้าชี้ชื่อชาทีละภาษา เด็กลองพูดตาม แล้วชี้ขวดนมอีกครั้งเพื่อบอกว่าไม่เอานม",
+      "คุณเติมรูปขวดนมไว้ข้างแก้วที่ใส่นม เด็กชี้อีกแก้วแล้วยิ้มกว้าง"
+    ],
+    "page": "พอแม่ค้ายกจานรองแก้วขึ้น หน้าหนังสือแผ่นที่สามก็ปลิวมาเกาะมือคุณ"
+  },
+  {
+    "en": "The Grammar Machine",
+    "th": "เครื่องพิมพ์พระจันทร์",
+    "story": "ในครัวเล็ก ๆ มีเครื่องพิมพ์ทองเหลืองตั้งอยู่ หลานสาวของคุณยายกำลังพิมพ์บัตรเชิญ เธอเขียนว่า “ยายเก็บพระจันทร์ดวงน้อยไว้ในครัว”",
+    "invite": "เครื่องพิมพ์ดังแกร๊ก “ฉันเขียนให้อ่านง่ายได้นะ ลองใช้คำว่า ยายมีไฟในครัว สิ” หลานสาวหันมาถามคุณว่า “เราจะพิมพ์คำไหนดี”",
+    "quote": "a little moon · พระจันทร์ดวงน้อย　／　a light · ดวงไฟ",
+    "options": [
+      "ใช้คำว่า a light ตามที่เครื่องพิมพ์แนะนำ",
+      "เก็บคำว่า a little moon ของหลานสาวไว้",
+      "พิมพ์ทั้งสองแบบไว้คู่กัน"
+    ],
+    "early": [
+      "เฟืองทองหมุนช้า ๆ คำว่า light ปรากฏขึ้นบนกระดาษ",
+      "ตัวอักษรคำว่า moon เรียงกันอยู่ใต้รูปดาว",
+      "เครื่องพิมพ์ใช้หมึกสีเงินพิมพ์คำว่า moon และหมึกสีฟ้าพิมพ์คำว่า light"
+    ],
+    "twist": "คุณยายเปิดประตูเข้ามาพร้อมโคมไฟรูปพระจันทร์ “ตอนหนูยังเล็ก หนูเรียกโคมของยายว่าพระจันทร์ดวงน้อย จำได้ไหม” เพื่อนที่เพิ่งหัดอ่านอังกฤษมองบัตรแล้วถามว่า “เขียนถึงอะไรกันเหรอ”",
+    "end": [
+      "เพื่อนอ่านคำว่า light แล้วเข้าใจทันที คุณยายจึงยกโคมมาเล่าต่อว่าทำไมมันถึงมีชื่อเล่น",
+      "หลานสาวอ่านคำว่า little moon ให้ยายฟัง เพื่อนหันไปเห็นโคมแล้วยิ้ม “อ๋อ พระจันทร์ดวงนี้นี่เอง”",
+      "เพื่อนชี้คำสองคำแล้วถามว่า “หมายถึงโคมดวงเดียวกันเหรอ” คุณยายขยับเก้าอี้ให้เขามานั่งฟังเรื่องด้วย"
+    ],
+    "page": "เครื่องพิมพ์จามดังฮัดชิ่ว! หน้าหนังสือแผ่นที่สี่หลุดออกมาพอดี"
+  },
+  {
+    "en": "The Door Without Rules",
+    "th": "ประตูบานสุดท้าย",
+    "story": "กลางสวนมีประตูบานหนึ่ง ด้านข้างมีป้ายเขียนว่า “ทางกลับบ้าน” คนเขียนป้ายกำลังถือพู่กัน ส่วนคนเดินทางยืนเอียงคอมองลูกศร",
+    "invite": "ลูกบิดประตูอ้าปากหาว “ฉันอยากรู้ว่าป้ายนี้บอกทางได้ดีหรือยัง เจ้าคิดว่าเราควรฟังใคร” มันคายกุญแจดอกจิ๋วลงในมือคุณ",
+    "quote": "“This way home.” · กลับบ้านทางนี้",
+    "options": [
+      "ฝากกุญแจให้คนเขียนป้ายช่วยดูคำ",
+      "ฝากกุญแจให้คนที่ต้องเดินตามป้าย",
+      "ชวนคนเขียนกับคนเดินทางมาลองเดินด้วยกัน"
+    ],
+    "early": [
+      "คนเขียนป้ายกางหนังสือออกดูว่าสะกดทุกคำถูกไหม",
+      "คนเดินทางเดินตามลูกศรไปสามก้าวแล้วหยุดคิด",
+      "ทั้งสองคนเดินตามลูกศรไปจนถึงประตู อีกฟากหนึ่งมีเสียงเคาะดังขึ้น"
+    ],
+    "twist": "ก๊อก ก๊อก! เด็กอีกฝั่งเปิดประตูเข้ามา “บ้านฉันอยู่ในสวน แต่บ้านเธออยู่เลยสวนออกไปนี่นา ถ้าเรายืนคนละฝั่ง คำว่า ‘กลับบ้าน’ จะพาเราไปที่เดียวกันหรือ”",
+    "end": [
+      "คนเขียนป้ายเติมชื่อสถานที่ทั้งสองฝั่ง คราวนี้คนอ่านเห็นแล้วว่าลูกศรชี้ไปไหน",
+      "คนเดินทางลองยืนทั้งสองฝั่ง แล้วพลิกป้ายให้คนที่เดินสวนมาเห็นทางของตัวเองด้วย",
+      "คนเขียนยืนฝั่งสวน คนเดินทางยืนอีกฝั่ง ทั้งคู่ลองอ่านป้ายให้กันฟังจนต่างคนต่างหาทางกลับได้"
+    ],
+    "page": "หน้าหนังสือแผ่นที่ห้าซ่อนอยู่หลังป้าย กระต่ายขาวชูหูทั้งสองข้าง “ครบแล้ว!”"
+  }
 ];
 const art=document.querySelector('.art'), panel=document.querySelector('.content');
 const range=(n,draw)=>Array.from({length:n},(_,i)=>draw(i)).join('');
 function scene(index,phase){
- const d=doors[index],color=d?.hue||'#6d8890';
- const inside=[
- '<g fill="#63484b" stroke="#e4b981" stroke-width="2">'+range(3,r=>range(7,i=>'<rect x="'+(183+i*19)+'" y="'+(152+r*44+i%3*4)+'" width="16" height="'+(36-i%3*4)+'" rx="2"/>')+'<path d="M180 '+(190+44*r)+'h140"/>')+'</g>',
- '<path d="M190 211l23 9 36-48 34 47 28-19-13 63H201z" fill="#edbb64" stroke="#65483e" stroke-width="5"/><path d="M210 249h80" stroke="#ffdfa3" stroke-width="5"/><circle cx="249" cy="221" r="10" fill="#ab5971"/>',
- '<path d="M169 180h160l-12-34H181z" fill="#ffdb9d"/>'+range(4,i=>'<path d="M'+(184+i*36)+' 146h16l4 34h-21z" fill="#af6359"/>')+'<path d="M209 218h69q-2 48-34 48t-35-48" fill="#b3e5d4"/><path d="M278 221q33-11 20 14l-20 10" stroke="#b3e5d4" stroke-width="6" fill="none"/><ellipse cx="244" cy="218" rx="35" ry="7" fill="#a36743"/>',
- '<g fill="#d9ab70" stroke="#65515a" stroke-width="4">'+[ [223,222,37],[276,181,28],[277,256,22]].map(([x,y,r])=>'<g transform="translate('+x+' '+y+')">'+range(10,i=>'<rect x="-6" y="-'+(r+4)+'" width="12" height="17" transform="rotate('+i*36+')"/>')+'<circle r="'+(r-4)+'"/><circle r="'+(r/2)+'" fill="#577580"/></g>').join('')+'</g>',
- '<g fill="none" stroke="#efd598" stroke-width="7" transform="rotate(34 250 214)"><ellipse cx="249" cy="186" rx="18" ry="23"/><path d="M249 210v58h21v-13h-19"/></g>'
- ];
- const rabbit='<g transform="translate(108 291) rotate(-8)" stroke="#594b50" stroke-width="2.2"><ellipse cx="-9" cy="-23" rx="6" ry="25" fill="#fff0ce" transform="rotate(-12)"/><ellipse cx="7" cy="-26" rx="6" ry="25" fill="#fff0ce"/><path d="M-5-39v20M8-41v19" stroke="#e9a69d" stroke-width="3"/><ellipse cy="26" rx="21" ry="25" fill="#b86360"/><ellipse cy="1" rx="21" ry="18" fill="#ffedcc"/><circle cx="8" cy="-3" r="2" fill="#273642"/><path d="M18 3l5 2-5 2" fill="#df9a91"/><path d="M-13 15l14 7 11-9" fill="#f3d491"/><circle cx="13" cy="35" r="8" fill="#e6bf72"/><path d="M13 30v6l4 2" fill="none"/></g>';
- const classroom=phase==='class';
- const door=classroom?'<rect x="158" y="127" width="186" height="136" rx="6" fill="#cba46e"/><rect x="164" y="133" width="174" height="124" fill="#355c58"/><text x="250" y="190" text-anchor="middle" fill="#f6efd8" font-family="Georgia" font-size="19">English class</text><path d="M202 209q51-9 95-1" stroke="#dce8d3" fill="none"/>':'<path d="M153 308V174a97 97 0 0 1 194 0v134z" fill="#233f49" stroke="#39474a" stroke-width="13"/><path d="M165 305V177a85 85 0 0 1 170 0v128z" fill="url(#glow)" stroke="#edc894" stroke-width="5"/><path d="M175 305V179a75 75 0 0 1 150 0v126" stroke="#9e7954" stroke-width="2" fill="none"/>'+ (inside[index]||'<g class="float"><path d="M194 190q31-10 56 8 28-17 58-8l-4 65q-35-6-54 9-26-16-52-9z" fill="#f7d99d" stroke="#5b4950" stroke-width="4"/><path d="M250 199v61m-46-55q21-5 35 4m-35 8q19-3 35 5m21-14q20-8 36-5m-36 17q20-8 36-5" fill="none" stroke="#ab805b" stroke-width="2"/></g>');
- art.innerHTML='<svg viewBox="0 0 500 380" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="sky" x2=".2" y2="1" gradientUnits="objectBoundingBox"><stop stop-color="#193244"/><stop offset="1" stop-color="'+color+'"/></linearGradient><radialGradient id="glow"><stop stop-color="#fbdda1"/><stop offset=".68" stop-color="'+color+'"/><stop offset="1" stop-color="#526471"/></radialGradient></defs><rect width="500" height="380" fill="url(#sky)"/><circle cx="361" cy="72" r="33" fill="#f3d39c"/><circle cx="372" cy="65" r="29" fill="#38515b"/><g fill="#ffe0aa" class="spark">'+range(29,i=>'<circle cx="'+(i*83%495)+'" cy="'+(28+i*43%200)+'" r="'+(1+i%2)+'"/>')+'</g><path d="M0 214q90-117 175-25t325-13v204H0" fill="'+color+'"/><path d="M0 259q120-78 210-27t290-38v186H0" fill="#355b60"/>'+door+'<path d="M202 302h99q-19 12 7 23t57 17q41 18 32 38H90q12-25 95-45t17-33" fill="#d3b890"/>'+range(6,i=>'<path d="M'+(192-i*13)+' '+(312+i*12)+'q46 4 95 0" fill="none" stroke="#a28e78" stroke-width="2"/>')+rabbit+range(2,k=>'<g transform="'+(k?'translate(500 0) scale(-1 1)':'')+'"><path d="M0 0h37q-6 47 28 70t74 16Q77 114 49 81q-13 76-46 121z" fill="#183b45"/>'+range(16,i=>'<ellipse cx="'+(i*17%123)+'" cy="'+(i*19%74)+'" rx="17" ry="6" transform="rotate(-32 '+(i*17%123)+' '+(i*19%74)+')" fill="'+(i%2?'#355c58':'#406963')+'"/>')+range(15,i=>'<path d="M'+(i*9)+' 380q-19-29-14-50 22 15 24 43-1-32 17-51 4 32-10 58" fill="'+(i%2?'#244a4c':'#41685b')+'"/>')+range(3,i=>'<g transform="translate('+(33+i*37)+' '+(326+i%2*22)+') scale('+(1-i*.17)+')"><path d="M-3 0l-3 23q7 5 13 0L4 0" fill="#f8d9aa"/><path d="M-18 1q15-36 36-1-15 9-36 1" fill="#cb786c"/><circle cx="-5" cy="-6" r="2.5" fill="#ffe5ba"/></g>')+'</g>')+'</svg>';
+ const slot=phase==='cover'?0:phase==='book'?6:phase==='class'?7:index+1;
+ const url='wonder-page-'+slot+'.webp';
+ art.style.setProperty('--picture','url("'+url+'")');
+ if(art.dataset.slot===String(slot))return;
+ art.dataset.slot=slot;
+ const picture=new Image();
+ picture.src=url;
+ picture.alt='';
+ art.replaceChildren(picture);
 }
 const article=document.querySelector('article');
 let journey=[],first=0,chapter=0;
@@ -42,12 +156,45 @@ function screen(label,title,body,actions,phase=''){
  panel.querySelector('h1').focus({preventScroll:true});window.scrollTo(0,0);
 }
 const p=s=>'<p>'+s+'</p>',q=s=>'<p class="quote">'+s+'</p>';
-function start(){journey=[];chapter=0;screen('THE RABBIT HOLE','English in<br><i>Wonderverse</i>',p('ปลายคาบภาษาอังกฤษ หนังสือ <i>The Rules of English</i> บนโต๊ะของคุณเปิดเอง กระต่ายตัวเล็กโผล่หูขึ้นมาจากรอยพับ แล้วคว้านาฬิกาที่กำลังเดินถอยหลัง')+q('“ถ้าอยากกลับให้ทันเสียงกริ่ง ช่วยฉันหาหน้าหนังสือที่หายไปทั้งห้าหน้าที!”'),[['กระโดดลงไปในหน้าหนังสือ',enter]],'cover')}
-function enter(){const d=doors[chapter];screen('DOOR 0'+(chapter+1)+' / 05 · '+d.en,d.th,p(d.story)+q(d.quote),d.options.map((s,i)=>[s,()=>reveal(i)]))}
-function reveal(i){first=i;const d=doors[chapter];screen('PLOT TWIST · '+d.en,'อีกด้านของเรื่อง',p(d.early[i])+q(d.twist),[['ยืนยันทางเดิม · '+d.options[i],()=>finish(i)],['ลองเลือกทางอื่น',rechoose]])}
-function rechoose(){const d=doors[chapter];screen('SECOND CHOICE · '+d.en,'เมื่อรู้เรื่องอีกด้าน…',p(d.twist)+p('ตอนแรกคุณเลือก “'+d.options[first]+'”'),d.options.map((s,i)=>[s,()=>finish(i)]))}
-function finish(i){const d=doors[chapter];journey.push({first,last:i});screen('THE BOOK OF CHOICES · หน้า '+journey.length,'หน้าที่หายไปกลับมาแล้ว',p(d.end[i])+q('ตัวอักษรบนหน้าหนังสือเรียงตัวเป็นข้อความของคุณ “'+d.options[i]+'”'),[[chapter===4?'เปิด The Book of Choices':'เปิดประตูถัดไป',()=>{if(chapter===4)book();else{chapter++;enter()}}]])}
-function book(){screen('FIVE PAGES · ONE JOURNEY','The Book of Choices',p('กระต่ายเย็บหน้าทั้งห้าเข้าด้วยกันด้วยด้ายสีทอง ลองพลิกดูว่าเรื่องของคุณเปลี่ยนตรงไหนบ้าง')+journey.map(({first,last},i)=>'<details class="page"><summary>หน้า '+(i+1)+' · '+doors[i].th+'</summary>'+p('แรกเลือก · '+doors[i].options[first])+p((first===last?'ยืนยัน · ':'เปลี่ยนเป็น · ')+doors[i].options[last])+p(doors[i].end[last])+'</details>').join(''),[['ก้าวผ่านหน้าสุดท้ายกลับห้องเรียน',ending]],'book')}
-function ending(){screen('BACK TO CLASS','เสียงกริ่งดังพอดี',p('คุณลืมตาที่โต๊ะตัวเดิม อาจารย์เพิ่งเขียนคำว่า “Good English” บนกระดาน ตรงมุมสมุดมีรอยเท้ากระต่ายเล็ก ๆ ห้ารอย คราวนี้คุณมีเรื่องจะเล่าให้เพื่อนฟัง')+q('หลังจากเดินทางผ่านทั้ง 5 ประตู คุณคิดว่าภาษาอังกฤษที่ “ดี” หรือ “ถูกต้อง” ควรตัดสินจากอะไร เพราะอะไร?')+p('ลองตอบในใจหรือเล่าให้เพื่อนฟังสัก 1–2 ประโยค'),[['ย้อนอ่านสมุดของฉัน',book],['เริ่มผจญภัยรอบใหม่',start]],'class')}
+function start(){
+ journey=[]; chapter=0;
+ screen('บทนำ · โพรงกระต่าย','English in<br><i>Wonderverse</i>',
+ p('ติ๊ก ต๊อก ติ๊ก ต๊อก… เสียงดังมาจากหนังสือภาษาอังกฤษบนโต๊ะเรียนของคุณ พอคุณเปิดปก กระต่ายขาวสวมเสื้อกั๊กก็โผล่หัวออกมา ด้ายสีทองเส้นหนึ่งพันอยู่รอบอุ้งเท้าของมัน')+
+ q('“แย่แล้ว! หน้าหนังสือของฉันปลิวเข้าไปในประตูทั้งห้าบาน ช่วยฉันตามหาให้ทันเสียงกริ่งหน่อยได้ไหม”'),
+ [['ตามกระต่ายลงไปในหนังสือ',enter]],'cover')
+}
+function enter(){
+ const d=doors[chapter];
+ screen('ประตูบานที่ '+(chapter+1)+' · '+d.en,d.th,p(d.story)+p(d.invite)+q(d.quote),
+ d.options.map((s,i)=>[s,()=>reveal(i)]))
+}
+function reveal(i){
+ first=i;const d=doors[chapter];
+ screen('ประตูบานที่ '+(chapter+1),['เสียงจากหน้าถัดไป','แขกหายไปครึ่งงาน','เมื่อลูกค้าใหม่มาถึง','คุณยายเปิดประตู','เสียงเคาะจากอีกฝั่ง'][chapter],
+ p(d.early[i])+p(d.twist)+q('กระต่ายกระซิบถาม “พอรู้เรื่องนี้แล้ว ยังอยากทำแบบเดิมไหม”'),
+ [['ทำแบบเดิม · '+d.options[i],()=>finish(i)],['ขอเลือกอีกครั้ง',rechoose]])
+}
+function rechoose(){
+ const d=doors[chapter];screen('ประตูบานที่ '+(chapter+1), 'คราวนี้คุณจะทำอย่างไร',p(d.twist),
+ d.options.map((s,i)=>[s,()=>finish(i)]))
+}
+function finish(i){
+ const d=doors[chapter]; journey.push({first,last:i});
+ screen('สมุดของกระต่าย · หน้า '+journey.length,d.th,p(d.end[i])+q(d.page),
+ [[chapter===4?'เปิดสมุดของกระต่าย':'ตามกระต่ายไปประตูถัดไป',()=>{if(chapter===4)book();else{chapter++;enter()}}]])
+}
+function book(){
+ screen('สมุดของกระต่าย','The Book of Choices',
+ p('กระต่ายร้อยด้ายสีทองเข้าเข็ม แล้วเย็บหน้าหนังสือทั้งห้ากลับเข้าด้วยกัน “ลองเปิดดูสิ เรื่องที่อยู่ในเล่มนี้เป็นเรื่องของเธอด้วยนะ”')+
+ journey.map(({first,last},i)=>'<details class="page"><summary>หน้า '+(i+1)+' · '+doors[i].th+'</summary>'+p('ตอนแรก คุณเลือก “'+doors[i].options[first]+'”')+p(first===last?'พอรู้เรื่องเพิ่ม คุณก็ยังเลือกทางเดิม':'พอรู้เรื่องเพิ่ม คุณเปลี่ยนใจ “'+doors[i].options[last]+'”')+p(doors[i].end[last])+'</details>').join(''),
+ [['ปิดสมุดแล้วกลับห้องเรียน',ending]],'book')
+}
+function ending(){
+ screen('บทส่งท้าย','กลับมาทันเสียงกริ่ง',
+ p('กริ๊ง! คุณเงยหน้าขึ้น คุณครูกำลังเขียนคำว่า Good English บนกระดาน หนังสือบนโต๊ะปิดสนิท แต่ตรงมุมสมุดมีรอยเท้ากระต่ายเล็ก ๆ อยู่ห้ารอย')+
+ q('คุณครูหันมายิ้ม “ถ้าเพื่อนถามว่าภาษาอังกฤษแบบไหนเรียกว่าใช้ได้ดี เธอจะเล่าเรื่องจากประตูบานไหนให้เพื่อนฟัง เพราะอะไรจ๊ะ”')+
+ p('ลองนึกคำตอบในใจ หรือหันไปเล่าให้เพื่อนฟังสักประโยคก็ได้'),
+ [['เปิดสมุดอ่านอีกครั้ง',book],['เริ่มนิทานใหม่',start]],'class')
+}
 start();
 </script></html>
