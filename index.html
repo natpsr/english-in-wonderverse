@@ -160,7 +160,7 @@ function start(){
  journey=[]; chapter=0;
  screen('บทนำ · โพรงกระต่าย','English in<br><i>Wonderverse</i>',
  p('ติ๊ก ต๊อก ติ๊ก ต๊อก… เสียงดังมาจากหนังสือภาษาอังกฤษบนโต๊ะเรียนของคุณ พอคุณเปิดปก กระต่ายขาวสวมเสื้อกั๊กก็โผล่หัวออกมา ด้ายสีทองเส้นหนึ่งพันอยู่รอบอุ้งเท้าของมัน')+
- q('“แย่แล้ว! หน้าหนังสือของฉันปลิวเข้าไปในประตูทั้งห้าบาน ช่วยฉันตามหาให้ทันเสียงกริ่งหน่อยได้ไหม”'),
+ q('“แย่แล้ว! หน้าหนังสือของฉันปลิวเข้าไปในประตูทั้งห้าบาน ช่วยฉันเก็บให้ครบก่อนเสียงกริ่งนะ แล้วเราจะเปิดหน้าลับดูด้วยกันว่าของวิเศษชิ้นไหนเลือกเธอ”'),
  [['ตามกระต่ายลงไปในหนังสือ',enter]],'cover')
 }
 function enter(){
@@ -187,7 +187,46 @@ function book(){
  screen('สมุดของกระต่าย','The Book of Choices',
  p('กระต่ายร้อยด้ายสีทองเข้าเข็ม แล้วเย็บหน้าหนังสือทั้งห้ากลับเข้าด้วยกัน “ลองเปิดดูสิ เรื่องที่อยู่ในเล่มนี้เป็นเรื่องของเธอด้วยนะ”')+
  journey.map(({first,last},i)=>'<details class="page"><summary>หน้า '+(i+1)+' · '+doors[i].th+'</summary>'+p('ตอนแรก คุณเลือก “'+doors[i].options[first]+'”')+p(first===last?'พอรู้เรื่องเพิ่ม คุณก็ยังเลือกทางเดิม':'พอรู้เรื่องเพิ่ม คุณเปลี่ยนใจ “'+doors[i].options[last]+'”')+p(doors[i].end[last])+'</details>').join(''),
- [['ปิดสมุดแล้วกลับห้องเรียน',ending]],'book')
+ [['เปิดหน้าลับ ดูของวิเศษของฉัน',fortune]],'book')
+}
+// Each tag describes the visible action. Choosing either announcer alone
+// gives too little evidence about why the player chose that speaker.
+const giftTags=[
+ ['quill','lamp','compass'],
+ [null,null,'compass'],
+ ['compass','lamp','compass'],
+ ['compass','lamp','lamp'],
+ ['quill','compass','compass']
+];
+const gifts={
+ quill:['🪶','ปากกาขนนกของบรรณาธิการ','วันไหนที่เพื่อนเขียนจดหมายสำคัญ เขาอาจเลื่อนกระดาษมาให้เธอ แล้วกระซิบว่า “ช่วยดูคำนี้อีกทีได้ไหม”'],
+ lamp:['🏮','โคมไฟของนักเล่าเรื่อง','วันไหนที่เพื่อนหาคำอังกฤษมาเล่าเรื่องที่บ้านไม่เจอ เธออาจเป็นคนที่ถามว่า “ที่บ้านเรียกมันว่าอะไรเหรอ เล่าให้ฟังหน่อยสิ”'],
+ compass:['🧭','เข็มทิศของนักเดินทาง','วันไหนที่เพื่อนถือแผนที่กลับหัว เธออาจลองไปยืนข้างเขา แล้วพบว่าบอกทางอีกแบบจะเข้าใจง่ายขึ้น']
+};
+function readGift(trail){
+ const votes={quill:0,lamp:0,compass:0};
+ const tags=trail.map(({last},i)=>giftTags[i][last]);
+ for(const tag of tags)if(tag)votes[tag]++;
+ const highest=Math.max(...Object.values(votes));
+ // When tied, let the most recent supporting door supply the example.
+ const door=tags.map(tag=>Boolean(tag && votes[tag]===highest)).lastIndexOf(true);
+ return {door,tag:tags[door]};
+}
+function fortune(){
+ const {door,tag}=readGift(journey);
+ const [icon,name,prediction]=gifts[tag];
+ const evidence=doors[door].options[journey[door].last];
+ const changed=journey.findIndex(({first,last})=>first!==last);
+ let memory='';
+ if(changed>=0){
+   const d=doors[changed],choice=journey[changed];
+   memory=p('ที่'+d.th+' ตอนแรกคุณเลือก “'+d.options[choice.first]+'” พอรู้เรื่องอีกด้าน คุณเปลี่ยนมาเลือก “'+d.options[choice.last]+'”');
+ }
+ screen('หน้าลับ · คำทำนายของกระต่าย',name,
+ p('<span aria-hidden="true" style="font-size:2.5rem">'+icon+'</span>')+
+ p('ด้ายสีทองลากผ่านหน้าที่ '+(door+1)+' แล้วหยุดตรงบรรทัดที่คุณเลือก “'+evidence+'” กระต่ายล้วงมือเข้าไปในภาพ แล้วหยิบของวิเศษออกมาวางบนฝ่ามือคุณ')+
+ q('กระต่ายทายว่า “'+prediction+'”')+memory,
+ [['พาของวิเศษกลับห้องเรียน',ending]],'book')
 }
 function ending(){
  screen('บทส่งท้าย','กลับมาทันเสียงกริ่ง',
